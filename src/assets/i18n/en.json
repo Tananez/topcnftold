@@ -1,0 +1,19 @@
+{
+	"test": "Test en",
+
+
+	"descriere": {
+		"1": "unu",
+		"2": "doi"
+
+	},
+	"normal": "Normal",
+	
+	"op_dst_mode_sel": [
+		"Nie",
+		"Tak",
+		"Automatycznie"
+	]
+
+
+}

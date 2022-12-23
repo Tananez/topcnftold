@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { AppApiModule } from './modules/app-api.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Translation Module
 import { AppTranslateModule } from './modules/app-translate.module';
 //UI Modules
@@ -32,7 +33,7 @@ import { UserLayoutComponent } from './components/user/user-layout/user-layout.c
 import { UserDashboardComponent } from './components/user/user-dashboard/user-dashboard.component';
 import { UserLogoutComponent } from './components/user/user-logout/user-logout.component';
 import { UserSettingsComponent } from './components/user/user-settings/user-settings.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
