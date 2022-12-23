@@ -32,6 +32,7 @@ import { UserLayoutComponent } from './components/user/user-layout/user-layout.c
 import { UserDashboardComponent } from './components/user/user-dashboard/user-dashboard.component';
 import { UserLogoutComponent } from './components/user/user-logout/user-logout.component';
 import { UserSettingsComponent } from './components/user/user-settings/user-settings.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { UserSettingsComponent } from './components/user/user-settings/user-sett
     AppApiModule,
     AppMaterialModule,
     AppBootstrapModule,
-    AppPrimengModule
+    AppPrimengModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
