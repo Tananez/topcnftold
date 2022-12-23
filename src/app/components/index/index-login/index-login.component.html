@@ -1,1 +1,66 @@
-<p>index-login works!</p>
+<section>
+ 
+       
+    <p class="desc"><ul id="desc_list"></ul>
+</section>
+<section>
+    <table class="contentbox">
+        <tr class="contentbox-header">
+            <td class="contentbox-header-left"></td><td class="contentbox-header-center"></td><td class="contentbox-header-right"></td>
+        </tr>
+        <tr class="contentbox-content">
+            <td class="contentbox-content-left"></td><td class="contentbox-content-center">
+                <h1>{{ 'loginHeader' | translate }}</h1>
+                <form id="login"  (ngSubmit)="login();">
+
+                    <div class="row">
+                        <label for="username">{{ 'loginUsername' | translate }}</label>
+                        <input formControlName="username" id="username" type="text">
+                    </div>
+                    <div class="row">
+                        <label for="password">{{ 'loginPassword' | translate }}</label>
+                        <input formControlName="password" id="password" type="text">
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="{{ 'loginButton' | translate }}">
+                    </div>
+                </form>
+                <br><span class="small" ></span>
+            </td><td class="contentbox-content-right"></td>
+        </tr>
+        <tr class="contentbox-footer">
+            <td class="contentbox-footer-left"></td><td class="contentbox-footer-center"></td><td class="contentbox-footer-right"></td>
+        </tr>
+    </table>
+</section>
+<section>
+    <div class="button-box">
+        <div class="button-box-inner">
+            <div class="button-important">
+                <a routerLink="/index/register" routerLinkActive="active">
+                    <span class="button-left"></span>
+                    <span class="button-center">{{ 'buttonRegister' | translate }}</span>
+                    <span class="button-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="button-box">
+        <div class="button-box-inner">
+            <div class="button multi">
+                <a routerLink="/index/recover" routerLinkActive="active">
+                    <span class="button-left"></span>
+                    <span class="button-center">{{ 'buttonLostPassword' | translate }}</span>
+                    <span class="button-right"></span>
+                </a>
+            </div>
+            <div class="button multi">
+                <a routerLink="/index/screens" routerLinkActive="active">
+                    <span class="button-left"></span>
+                    <span class="button-center">{{ 'buttonScreenshot' | translate }}</span>
+                    <span class="button-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

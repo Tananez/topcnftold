@@ -1,1 +1,24 @@
-<p>index-register works!</p>
+<div id="registerFormWrapper">
+    <form  (ngSubmit)="register();">
+      <input type="hidden" value="send" name="mode">
+        <div class="rowForm">
+          <label for="username">{{'registerUsername'|translate}}</label>
+          <input type="text" class="input" formControlName="username" id="username" maxlenght="32">
+          <span class="inputDesc">{{'registerUsernameDesc'|translate}}</span>
+        </div>
+        <div class="rowForm">
+          <label for="password">{{'registerPassword'|translate}}</label>
+          <input type="password" class="input" formControlName="password" id="password">
+          <span class="inputDesc">{{'registerPasswordDesc'|translate}}</span>
+        </div>
+        <div class="rowForm">
+          <label for="email">{{'registerEmail'|translate}}</label>
+          <input type="email" class="input" formControlName="email" id="email">
+          <span class="inputDesc">{{'registerEmailDesc'|translate}}</span>
+        </div>      
+  
+  
+        <div class="rowForm">
+          <input type="submit" class="submitButton" value="{{'buttonRegister'|translate}}">
+        </div>
+      </form>
