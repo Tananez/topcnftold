@@ -5,8 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GetTimePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
-  }
+  transform(value: number): string {
+    const minutes: number = Math.floor(value / 60);
+    return minutes.toString().padStart(2, '0') + ':' + Math.floor((value - minutes * 60)).toString().padStart(2, '0');
+ }
 
 }

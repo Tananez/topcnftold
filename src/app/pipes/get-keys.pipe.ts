@@ -5,8 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GetKeysPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: {}): string[] {
+
+    if (!value) {
+      return [];
+    }
+
+    return Object.keys(value);
   }
 
 }
