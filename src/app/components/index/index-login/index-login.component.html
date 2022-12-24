@@ -11,7 +11,7 @@
         <tr class="contentbox-content">
             <td class="contentbox-content-left"></td><td class="contentbox-content-center">
                 <h1>{{ 'loginHeader' | translate }}</h1>
-                <form id="login"  (ngSubmit)="login();">
+                <form id="login" [formGroup]="loginForm" (ngSubmit)="login();">
 
                     <div class="row">
                         <label for="username">{{ 'loginUsername' | translate }}</label>

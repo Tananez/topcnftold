@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development modules
 ng add @angular/material
+ng add ngx-bootstrap
 npm i @ngx-translate/core
 npm i @ngx-translate/http-loader
-
 
 
 

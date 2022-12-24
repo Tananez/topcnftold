@@ -11,6 +11,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 export class IndexLoginComponent {
 
   data: any = [];
+  
+  loginForm = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl('')
+  });
 
   constructor(
     private crudService: CrudService,
@@ -18,10 +23,7 @@ export class IndexLoginComponent {
     private snackBar: MatSnackBarModule
     ) { }
 
-  loginForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl('')
-  });
+
     
   ngOnInit() {   
 

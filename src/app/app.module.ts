@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { AppApiModule } from './modules/app-api.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 //Translation Module
 import { AppTranslateModule } from './modules/app-translate.module';
 //UI Modules
@@ -64,6 +67,8 @@ import { UserSettingsComponent } from './components/user/user-settings/user-sett
     AppMaterialModule,
     AppBootstrapModule,
     AppPrimengModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   providers: [],

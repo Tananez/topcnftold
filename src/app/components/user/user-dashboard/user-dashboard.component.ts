@@ -12,6 +12,7 @@ export class UserDashboardComponent {
 
   data: any = [];
 
+  
   constructor(private crudService: CrudService,    private router: Router) { }
 
   ngOnInit(): void {
@@ -23,16 +24,15 @@ export class UserDashboardComponent {
     this.crudService.post('user.php', data).subscribe((data:any) => {
       
       this.data = data
-    
+
       if(data.allow == 0){
         this.router.navigate(['/index/login']);
       }
     
 
-    },
-      
-    error => {
-      
+    },      
+    error => {      
+
       if(error.allow == 0){
         this.router.navigate(['/index/login']);
       }
