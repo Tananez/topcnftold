@@ -8,6 +8,8 @@ import { IndexLayoutComponent } from '../components/index/index-layout/index-lay
 import { IndexLoginComponent } from '../components/index/index-login/index-login.component';
 import { IndexRegisterComponent } from '../components/index/index-register/index-register.component';
 import { IndexRecoverComponent } from '../components/index/index-recover/index-recover.component';
+import { PageNotFoundComponent } from '../components/index/page-not-found/page-not-found.component';
+
 //-------Admin
 import { AdminLayoutComponent } from '../components/admin/admin-layout/admin-layout.component';
 import { AdminDashboardComponent } from '../components/admin/admin-dashboard/admin-dashboard.component';
@@ -22,8 +24,7 @@ import { UserSettingsComponent } from '../components/user/user-settings/user-set
 const routes: Routes = [
 
   { path: 'index', component: IndexLayoutComponent,
-  children: [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
+  children: [  
     { path: 'login', component: IndexLoginComponent },
     { path: 'register', component: IndexRegisterComponent },
     { path: 'recover', component: IndexRecoverComponent },
@@ -31,7 +32,6 @@ const routes: Routes = [
   },
   { path: 'user', component: UserLayoutComponent,
   children: [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: UserDashboardComponent },
     { path: 'settings', component: UserSettingsComponent },
     { path: 'logout', component: UserLogoutComponent }
@@ -39,13 +39,13 @@ const routes: Routes = [
   },
   { path: 'admin', component: AdminLayoutComponent,
   children: [
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: AdminDashboardComponent },
     { path: 'connect', component: AdminLoginComponent },
     { path: 'disconnect', component: AdminLogoutComponent }
   ]
   },
-  { path: '**', component: IndexLayoutComponent }
+  { path: '',   redirectTo: 'index/login', pathMatch: 'full' }, // redirect to index/login
+  { path: '**', component: PageNotFoundComponent },  // Error 404
 ];
 
 

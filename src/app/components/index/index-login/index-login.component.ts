@@ -2,7 +2,12 @@ import { Component } from '@angular/core';
 import { CrudService } from 'src/app/services/crud.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
+
 @Component({
   selector: 'app-index-login',
   templateUrl: './index-login.component.html',
@@ -11,7 +16,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 export class IndexLoginComponent {
 
   data: any = [];
-  
+  horizontalPosition: MatSnackBarHorizontalPosition = 'right';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+  durationInSeconds = 2;
+
   loginForm = new FormGroup({
     username: new FormControl(''),
     password: new FormControl('')
@@ -20,7 +28,7 @@ export class IndexLoginComponent {
   constructor(
     private crudService: CrudService,
     private router: Router,
-    private snackBar: MatSnackBarModule
+    private _snackBar: MatSnackBar
     ) { }
 
 
@@ -43,14 +51,32 @@ export class IndexLoginComponent {
     
       if(data['code'] == 1)	{
         localStorage.setItem('token', data['token']);       
-        this.router.navigate(['/user/home']);
-          console.log(data['response']); 
+        this.router.navigate(['/user/home']);         
+
+          this._snackBar.open(data['response'], 'Close', {
+            horizontalPosition: this.horizontalPosition,
+            verticalPosition: this.verticalPosition,
+            duration: this.durationInSeconds * 1000,          
+          });
+
+
       }else if(data['code'] == 0) {
-          console.log(data['response']);
+        this._snackBar.open(data['response'], 'Close', {
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition,
+          duration: this.durationInSeconds * 1000,          
+        });
       }
 
     },
-    error => {console.log(error.error);}
+    error => { 
+
+      this._snackBar.open(error, 'Close', {
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+        duration: this.durationInSeconds * 1000,          
+      });
+    }
     );
 
   }

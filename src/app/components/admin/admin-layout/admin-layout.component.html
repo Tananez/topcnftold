@@ -1,9 +1,12 @@
-<a routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a>
-<a routerLink="/admin/connect" routerLinkActive="active">Connect</a>
-<a routerLink="/admin/disconnect" routerLinkActive="active">Disconnect</a>
-<br>
-<a routerLink="/index/login" routerLinkActive="active">INDEX</a>
-<a routerLink="/user/home" routerLinkActive="active">USER</a>
-<a routerLink="/admin/dashboard" routerLinkActive="active">ADMIN</a>
+<mat-toolbar color="primary">
+
+    <button mat-button routerLink="/admin/dashboard">Dashboard</button>
+    <button mat-button routerLink="/admin/connect">Connect</button>
+    <button mat-button routerLink="/admin/disconnect">Disconnect</button>
+    <span class="example-spacer"></span>
+    <button routerLink="/user/home" mat-icon-button class="example-icon exit_to_app" aria-label="Example icon-button with share icon">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
 
 <router-outlet></router-outlet>

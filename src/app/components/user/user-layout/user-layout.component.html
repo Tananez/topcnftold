@@ -1,8 +1,18 @@
-<a routerLink="/user/home" routerLinkActive="active">Home</a>
-<a routerLink="/user/settings" routerLinkActive="active">settings</a>
-<a routerLink="/user/logout" routerLinkActive="active">Logout</a>
-<br>
-<a routerLink="/index/login" routerLinkActive="active">INDEX</a>
-<a routerLink="/user/home" routerLinkActive="active">USER</a>
-<a routerLink="/admin/dashboard" routerLinkActive="active">ADMIN</a>
+<mat-toolbar color="primary">
+
+
+    <button mat-button routerLink="/user/home">Home <mat-icon>home</mat-icon></button>
+
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/admin/dashboard">ADMIN</button>
+    <button routerLink="/user/settings" mat-icon-button class="example-icon settings-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button routerLink="/user/logout" mat-icon-button class="example-icon exit_to_app" aria-label="Example icon-button with share icon">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
 <router-outlet></router-outlet>
+
+
+

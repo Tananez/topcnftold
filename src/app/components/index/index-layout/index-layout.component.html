@@ -1,10 +1,7 @@
-<a routerLink="/index/login" routerLinkActive="active">Login</a>
-<a routerLink="/index/register" routerLinkActive="active">Register</a>
-<a routerLink="/index/recover" routerLinkActive="active">Recover</a>
-<br>
-<a routerLink="/index/login" routerLinkActive="active">INDEX</a>
-<a routerLink="/user/home" routerLinkActive="active">USER</a>
-<a routerLink="/admin/dashboard" routerLinkActive="active">ADMIN</a>
-
+<mat-toolbar color="primary">
+    <button mat-button routerLink="/index/login">Login</button>
+    <button mat-button routerLink="/index/register">Register</button>
+    <button mat-button routerLink="/index/recover">Recover</button>
+  </mat-toolbar>
 
 <router-outlet></router-outlet>

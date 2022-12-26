@@ -26,6 +26,8 @@ import { IndexLayoutComponent } from './components/index/index-layout/index-layo
 import { IndexLoginComponent } from './components/index/index-login/index-login.component';
 import { IndexRegisterComponent } from './components/index/index-register/index-register.component';
 import { IndexRecoverComponent } from './components/index/index-recover/index-recover.component';
+import { PageNotFoundComponent } from './components/index/page-not-found/page-not-found.component';
+
 //-------Admin
 import { AdminLayoutComponent } from './components/admin/admin-layout/admin-layout.component';
 import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
@@ -57,7 +59,8 @@ import { UserSettingsComponent } from './components/user/user-settings/user-sett
     GetKeysPipe,
     GetSumPipe,
     GetTimePipe,
-    GetVarsPipe
+    GetVarsPipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
